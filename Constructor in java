@@ -1,0 +1,35 @@
+
+class Abc{
+    int a;
+    int b;
+    Abc()
+    {
+        a=b=0;
+    }
+    Abc(int x,int y)
+    {
+        a=x;
+        b=y;
+    }
+    Abc(Abc o)
+    {
+        a=o.a;
+        b=o.b;  //copy constructor
+    }
+    void print1()
+    {
+        System.out.println{
+            System.out.println(a+" "+b);
+        }
+    }
+}
+class ConstructDemo{
+    public static void main(String[] args) {
+        Abc o1=new Abc();  //default constructor
+        Abc o2=new Abc(30,40); //parametrized constructor
+        Abc o3=new Abc(o2);
+        o1.print1();
+        o2.print1();
+        o3.print1();
+    }
+}
