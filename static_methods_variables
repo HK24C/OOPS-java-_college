@@ -1,0 +1,38 @@
+class static_block{
+    static int x;
+    int y;            //static variables
+    static{
+        x=10;
+    }
+
+static void disp_static()
+{
+    System.out.println(x);    
+}
+static_block()
+{
+    y=0;              //static method
+    x++;
+}
+static_block(int y)
+{
+    this.y=y;           //static block
+    x++;
+}
+void disp()
+{
+    System.out.println(y);
+    System.out.println(x);
+}
+}
+public class static_demo {
+    public static void main(String [] args)
+    {
+        static_block.disp_static();
+        System.out.println(static_block.x);
+        static_block s1=new static_block();
+        s1.disp();
+        static_block s2=new static_block(11);
+        s2.disp();
+    }    
+}
