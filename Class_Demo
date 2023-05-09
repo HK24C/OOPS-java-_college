@@ -1,0 +1,28 @@
+class Room{
+    int Room_No;
+    String type;
+    double RoomArea;
+    String ACmachine;
+}
+void SetData(int no,String t,double ar,String a)
+{
+    Room_No=no;
+    type=t;
+    RoomArea=ar;
+    ACmachine=a;
+}
+void DisplayData()
+{
+    System.out.println("Room Number: ",+Room_No);
+    System.out.println("Room type: ",+type);
+    System.out.println("RoomArea: ",RoomArea);
+    System.out.println("Room NUmber: ",ACmachine);
+}
+    public class Room_class {
+    public static void main(String[] args)
+    {
+        Room obj=new Room();
+        obj.SetData(123,"premium",138.56,"Ac");
+        obj.DisplayData();
+    }
+}
