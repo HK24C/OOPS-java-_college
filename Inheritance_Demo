@@ -1,0 +1,47 @@
+class A{
+    int i,j;
+    A(){
+        i=j=0;
+        System.out.println("Default constructor of A class called");
+    }
+    A(int i,int j){
+        this.i=i;
+        this.j=j;
+        System.out.println("Parameterized constructor of A class called");
+    }
+    void showij()
+    {
+        System.out.println("i: "+i+"j: "+j);
+    }
+}
+    class B extends A{
+        int k;
+        B()
+        {
+            k=0;
+            System.out.println("Default constructor of B class called");
+        }
+        B(int k)
+        {
+            this.k=k;
+            System.out.println("Parameterized constructor of B class");
+        }
+        void showk()
+        {
+            System.out.println("k:"+k);
+        }
+    }
+    
+    public class InheritanceDemo{
+        public static void main(String[] args) {
+            A obA1= new A();
+            A obA2= new A(10,20);
+            B obB1= new B();
+            B obB2= new B(5);
+            obA1.showij();
+            obA2.showij();
+            obB1.showk();
+            obB2.showij();
+            obB2.showk();
+        }
+    }
