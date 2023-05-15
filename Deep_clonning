@@ -1,0 +1,25 @@
+class Clonetest11{
+    int i=10;
+}
+public class DemoDeep implements Cloneable{
+    int j=20;
+    Clonetest11 ob=new Clonetest11();
+    public Object Clone() throws CloneNotSupportedException{
+        ob=new Clonetest11();
+        DemoDeep cdobj=new DemoDeep();
+        cdobj.ob.i=33;
+        cdobj.j=44;
+        return cdobj;
+    }
+    public static void main(String []args)throws CloneNotSupportedException{
+        DemoDeep c1= new DemoDeep();
+        DemoDeep c2= (DemoDeep)c1.clone();
+        System.out.println("Program of Deep Clonning");
+        System.out.println("original object values"+c1.ob.i+" "+c1.j);  //10 20
+        System.out.println("Clonned object vlaues"+c2.ob.i+" "+c2.j);   //10 20
+        c2.ob.i=11;
+        c2.j=21;
+        System.out.println("Original object values"+c1.ob.i+" "+c1.j);// 11 20
+        System.out.println("clonned object values"+c2.ob.i+" "+c2.j);//11 21
+    }
+}
