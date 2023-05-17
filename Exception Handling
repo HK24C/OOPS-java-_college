@@ -1,0 +1,36 @@
+import java.util.Scanner;
+public class ExceptionDemo{
+    public static void main(String[] ags){
+        int d,a[];
+        a=new a[5];
+        int ch;
+        scanner s=new scanner(System.in);
+        System.out.println("Enter 0 or 1");
+        ch=S.nextInt();
+        try{
+            if(ch==0){
+                d=0;
+                a=40;
+                System.out.println(a/d);
+                System.out.println("End of try block");
+
+            }
+            if(ch==1){
+                for(int i=0;i<6;i++){
+                    a[i]=S.nextInt();
+                }
+            }
+        }
+        catch(ArithmeticException e){
+            System.out.println("The divide by Zero Error");
+            System.out.println("The Error"+e);
+        }
+        catch(ArrayIndexOutofBoundException e){
+            System.out.println("Array index out of bounds");
+            System.out.println("The Error"+e);
+        }
+        finally{
+            System.out.println("Finally Execute");
+        }
+    }
+}
