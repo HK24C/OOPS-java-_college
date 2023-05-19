@@ -1,0 +1,17 @@
+class MyException extends Exception{
+    public String toString(){
+        return "My Exception Occured";
+    }
+}
+public class ExceptionDemo{
+    static void func() throws MyException{
+        throw new MyException();
+    }
+    public static void main(String[] args){
+        try {
+            func();
+        } catch (MyException exc) {
+            System.out.println("exc");
+        }
+    }
+}
