@@ -1,0 +1,17 @@
+public class ExceptionDemo1 {
+    static void check2(){
+        try{
+            int a=5/0;
+        }
+        catch(Exception e){
+            System.out.println("In Catch block");
+            e.printStackTrace();
+        }
+    }
+    static void check(){
+        check2();
+    }
+    public static void main(String[] args){
+        check();
+    }
+}
